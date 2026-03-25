@@ -93,7 +93,7 @@ a {
     top: 0;
     z-index: 100;
     background-color: var(--cream);
-    padding: 1rem 2rem;
+    padding: 1rem 1rem;
 }
 
 .nav-inner {
@@ -159,9 +159,11 @@ a {
 .hero {
     display: flex;
     flex-direction: column;
-    padding: 2rem 2rem;
+    padding: 0.5rem 2rem 0;
     padding-top: 0;
     height: 100svh;
+    justify-content: flex-start;
+    gap: 0;
 }
 
 .hero-divider {
@@ -197,10 +199,11 @@ a {
 }
 
 .hero-cards {
-    height: 50svh;
+    height: 38svh;
     display: flex;
     justify-content: center;
     gap: 1rem;
+    margin-top: -0.5rem;
 }
 
 .hero-cards .card {
@@ -254,8 +257,14 @@ a {
     display: flex;
     flex-direction: column;
     align-items: start;
-    max-width: 50%;
-    font-size: 1.4rem;
+    max-width: 60%;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.hero-description p{
+    padding-top: 10px;
+    font-weight: 600;
 }
 
 .hero-tag {
@@ -268,13 +277,36 @@ a {
 }
 
 /* ─── ABOUT + EDUCATION (combined) ─────────────────── */
+
+.pip {
+    position: absolute;
+    font-size: 3rem;
+    padding: 2rem;   /*adding responsive values later*/
+    user-select: none; 
+    /* color: #000; */
+   opacity: .3;
+}
+
+
+.top-left     { top: 0; left: 0; }
+.top-right    { top: 0; right: 0; }
+.bottom-left  { bottom: 0; left: 0; }
+.bottom-right { bottom: 0; right: 0; }
+
+
+.bottom-left, .bottom-right {
+    transform: rotate(180deg);
+}
+
 .about-section {
+    position: relative;
     background-color: var(--red);
     color: var(--light);
     padding: 8rem 2rem 6rem;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    /* border-radius: 50px; */
 }
 
 .about-inner {
@@ -416,22 +448,14 @@ a {
 }
 
 
+
 /* ─── PROJECTS ──────────────────────────────────────── */
 .projects-section {
     padding: 6rem 3rem;
     background-color: var(--cream-2);
 }
 
-/* thin red rule above the section */
-.projects-section::before {
-    content: "";
-    display: block;
-    width: 3rem;
-    height: 3px;
-    background-color: var(--red);
-    margin-bottom: 3rem;
-    border-radius: 2px;
-}
+
 
 .project {
     display: grid;
@@ -549,15 +573,7 @@ a {
     background-color: var(--cream);
 }
 
-.contact-section::before {
-    content: "";
-    display: block;
-    width: 3rem;
-    height: 3px;
-    background-color: var(--red);
-    margin-bottom: 4rem;
-    border-radius: 2px;
-}
+
 
 .contact-inner {
     display: grid;
@@ -768,7 +784,7 @@ a {
     border-radius: 50%;
     background: rgba(0, 0, 0, 0.07);
     pointer-events: none;
-    transform: scale(0);
+    transform: scale(0); 
     animation: fan-ripple-out 0.5s ease forwards;
 }
 
@@ -778,12 +794,13 @@ a {
 
 /* ─── FOOTER ────────────────────────────────────────── */
 .site-footer {
-    background-color: var(--dark);
-    color: var(--cream);
+    background-color: var(--red);
+    color:  #f9f4eba4;;
     text-align: center;
     padding: 1.5rem;
-    font-size: 0.82rem;
+    font-size: 0.90rem;
     font-weight: 300;
+
 }
 
 /* ═══════════════════════════════════════════════════════

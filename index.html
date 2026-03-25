@@ -111,7 +111,7 @@
 
             <div class="hero-description">
                 <div class="hero-tag">Jr SWE Student</div>
-                <p>A jack of all trades is a master of none, but oftentimes better than a master of one.</p>
+                <p>A jack of all trades is a master of none,<br> but oftentimes better than a master of one.</p>
             </div>
 
         </section>
@@ -123,6 +123,13 @@
         <section class="about-section" id="about" aria-labelledby="about-heading">
             <div class="about-inner">
 
+                <div class="corner-pips">
+                    <span class="pip top-left">♠</span>
+                    <span class="pip top-right">♦</span>
+                    <span class="pip bottom-left">♥</span>
+                    <span class="pip bottom-right">♣</span>
+                </div>
+
                 <span class="section-tag">About &amp; Education</span>
                 <h2 class="about-statement" id="about-heading">
                     Working across frontend and backend, mostly interested in the
@@ -133,12 +140,6 @@
                     at the University of Jeddah, currently in my 4th year. My goal is always work that feels intentional.
                 </p>
 
-                <div class="about-suits" aria-hidden="true">
-                    <span>♠</span>
-                    <span class="suit-red">♥</span>
-                    <span class="suit-red">♦</span>
-                    <span>♣</span>
-                </div>
 
                 <div class="edu-facts" aria-label="Education details">
 
@@ -172,6 +173,9 @@
 
             </div>
         </section>
+
+
+
 
 
         <!-- ═══════════════════════════════════════════════
@@ -272,6 +276,9 @@
         </section>
 
 
+
+
+
         <!-- ═══════════════════════════════════════════════
              CONTACT — Fan Cards
         ════════════════════════════════════════════════ -->
@@ -286,7 +293,7 @@
                         Have a project in mind, want to collaborate, or just want to say hi?
                         Pick a card to reach me.
                     </p>
-                    <p class="contact-hint">Click any card to bring it forward</p>
+
                 </div>
 
                 <!-- Right: fan card stage -->
@@ -421,7 +428,7 @@
                         </div>
                     </a>
 
-                </div><!-- /fan-stage -->
+                </div>
 
             </div>
         </section>
@@ -429,17 +436,18 @@
     </main>
 
     <footer class="site-footer" role="contentinfo">
-        <span aria-hidden="true">♠ <span class="suit-red">♥</span> <span class="suit-red">♦</span> ♣</span>
-        &nbsp; Shumokh Alsharif &nbsp;·&nbsp; 2026
+        &nbsp; Shumokh Alsharif &nbsp; @ &nbsp; 2026
     </footer>
 
-    <!-- Bootstrap JS (navbar collapse) -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc4s9bIOgUxi8T/jzmBzJMBdPEQQoMftqvXF/2iHe2Sk" crossorigin="anonymous"></script>
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
 
-    <!-- Fan Cards -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+ 
+     <script src="hero.js"></script>
     <script src="links.js"></script>
 
 </body>
