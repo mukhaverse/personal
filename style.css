@@ -157,13 +157,10 @@ a {
 
 /* ─── HERO ──────────────────────────────────────────── */
 .hero {
-    display: flex;
-    flex-direction: column;
-    padding: 0.5rem 2rem 0;
-    padding-top: 0;
+    position: relative;
     height: 100svh;
-    justify-content: flex-start;
-    gap: 0;
+    padding: 1rem 2rem;
+    overflow: hidden;
 }
 
 .hero-divider {
@@ -174,6 +171,7 @@ a {
     font-weight: 800;
     align-items: center;
     word-spacing: 10px;
+    margin-bottom: 25vh;
 }
 
 .hero-divider-right-text,
@@ -185,9 +183,13 @@ a {
 }
 
 .hero-title-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    top: 25%;
+
 }
 
 .hero-title {
@@ -195,15 +197,15 @@ a {
     font-weight: 400;
     text-align: center;
     margin: auto;
+
     font-family: var(--font-display);
 }
 
 .hero-cards {
-    height: 38svh;
+    height: 35svh;
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-top: -0.5rem;
 }
 
 .hero-cards .card {
@@ -259,7 +261,7 @@ a {
     align-items: start;
     max-width: 60%;
     font-size: 1.5rem;
-    margin-top: 0.5rem;
+      margin-top: 1rem;
 }
 
 .hero-description p{
