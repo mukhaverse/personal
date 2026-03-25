@@ -1,0 +1,281 @@
+
+@media (max-width: 992px) {
+
+    /* Hero */
+    .hero-description {
+        max-width: 65%;
+    }
+
+    .hero-cards .card {
+        width: 150px;
+    }
+
+    /* Projects */
+    .project {
+        grid-template-columns: 1fr !important;
+        direction: ltr !important;
+        gap: 2.5rem;
+        margin-bottom: 5rem;
+    }
+
+    .project > * {
+        direction: ltr !important;
+    }
+
+    .project-visual {
+        height: 300px;
+    }
+
+    /* Contact */
+    .contact-inner {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .fan-stage {
+        min-height: 400px;
+    }
+
+    .fan-card {
+        width: 175px;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — 768px
+   ════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .site-nav {
+        padding: 1rem 1.25rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 1rem 1.25rem;
+        padding-top: 0;
+        height: auto;
+        min-height: 100svh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hero-divider {
+        font-size: 1.5rem;
+        word-spacing: 5px;
+    }
+
+    .hero-divider-right-text,
+    .hero-divider-left-text {
+        font-size: 0.7rem;
+    }
+
+    .hero-title-cont {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        margin: 1.5rem 0;
+    }
+
+    .hero-title {
+        font-size: 16vw;
+    }
+
+    .hero-cards {
+        height: auto;
+        flex-shrink: 0;
+        justify-content: center;
+        gap: 0.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-cards .card {
+        width: 110px;
+    }
+
+    .hero-description {
+        max-width: 90%;
+        font-size: 1.1rem;
+    }
+
+    /* About */
+    .about-section {
+        padding: 5rem 1.5rem 4rem;
+    }
+
+    .edu-facts {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    /* Projects */
+    .projects-section {
+        padding: 4rem 1.5rem;
+    }
+
+    .project-visual {
+        height: 260px;
+        font-size: 5rem;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 5rem 1.5rem;
+    }
+
+    .fan-stage {
+        min-height: 360px;
+    }
+
+    .fan-card {
+        width: 145px;
+    }
+
+    .fan-card-icon {
+        font-size: 2.2rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — 576px
+   ════════════════════════════════════════════════════ */
+@media (max-width: 576px) {
+
+    /* Hero */
+    .hero {
+        padding: 0.5rem;
+        padding-top: 0;
+    }
+
+    .hero-divider {
+        font-size: 1rem;
+        word-spacing: 3px;
+    }
+
+    .hero-divider-left,
+    .hero-divider-right {
+        display: none;
+    }
+
+    .hero-divider-right-text,
+    .hero-divider-left-text {
+        font-size: 0.6rem;
+    }
+
+    .hero-title {
+        font-size: 15vw;
+    }
+
+    .hero-cards {
+        gap: 0.4rem;
+    }
+
+    .hero-cards .card {
+        width: 95px;
+    }
+
+    .hero-description {
+        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    .hero-tag {
+        font-size: 0.7rem;
+        padding: 4px 8px;
+    }
+
+    /* About */
+    .about-statement {
+        font-size: 1.5rem;
+    }
+
+    .edu-year-num {
+        font-size: 2rem;
+    }
+
+    /* Projects */
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /* Contact */
+    .contact-section {
+        padding: 4rem 1rem;
+    }
+
+    .contact-title {
+        font-size: 3.5rem;
+    }
+
+    .fan-stage {
+        min-height: 300px;
+    }
+
+    .fan-card {
+        width: 115px;
+        padding: 0.75rem;
+        border-radius: var(--radius-md);
+    }
+
+    .fan-card-corner-val {
+        font-size: 1.1rem;
+    }
+
+    .fan-card-icon {
+        font-size: 1.8rem;
+    }
+
+    .fan-card-label {
+        font-size: 0.85rem;
+    }
+
+    .fan-card-url {
+        font-size: 0.6rem;
+    }
+
+    .fan-intro-tagline {
+        font-size: 1rem;
+    }
+}
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE — 360px
+   ════════════════════════════════════════════════════ */
+@media (max-width: 360px) {
+
+    .hero-divider {
+        font-size: 0.8rem;
+    }
+
+    .hero-title {
+        font-size: 17vw;
+    }
+
+    .hero-description {
+        font-size: 0.9rem;
+    }
+
+    .hero-cards .card {
+        width: 80px;
+    }
+
+    .fan-card {
+        width: 95px;
+        padding: 0.6rem;
+    }
+
+    .fan-card-corner-val {
+        font-size: 0.95rem;
+    }
+
+    .fan-card-icon {
+        font-size: 1.5rem;
+    }
+
+    .fan-card-label {
+        font-size: 0.75rem;
+    }
+}
