@@ -79,13 +79,27 @@
     color: inherit;
 }
 
+.fan-card[data-card-index="0"] {
+    padding: 0;
+    overflow: hidden;
+    width: 220px
+}
+
+.fan-card[data-card-index="0"] .card-img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: var(--radius-lg);
+    display: block;
+}
+
 .fan-card:focus-visible {
     outline: 2.5px solid var(--dark);
     outline-offset: 4px;
 }
 
 
-.fan-card[data-card-index="0"] { background-color: var(--dark); color: var(--cream); }
+/* .fan-card[data-card-index="0"] { background-color: var(--dark); color: var(--cream); } */
 .fan-card[data-card-index="1"] { background-color: var(--accent-1); }
 .fan-card[data-card-index="2"] { background-color: var(--accent-2); }
 .fan-card[data-card-index="3"] { background-color: var(--accent-3); }

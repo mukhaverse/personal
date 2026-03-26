@@ -92,7 +92,7 @@
         height: auto;
         flex-shrink: 0;
         justify-content: center;
-        gap: 2rem;
+        gap: 2.3rem;
         margin-bottom: 1.5rem;
     }
 
@@ -102,7 +102,7 @@
 
     .hero-description {
         max-width: 90%;
-        font-size: 1.1rem;
+        font-size: 1.7rem;
     }
 
     /* About */
@@ -147,6 +147,11 @@
     .fan-card-icon {
         font-size: 2.2rem;
     }
+
+     .fan-card[data-card-index="0"] {
+
+    width: 170px
+}
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -164,6 +169,7 @@
     .hero-divider {
         font-size: 1rem;
         word-spacing: 3px;
+        justify-content: space-around;
     }
 
     .hero-divider-left,
@@ -173,11 +179,11 @@
 
     .hero-divider-right-text,
     .hero-divider-left-text {
-        font-size: 0.6rem;
+        font-size: 0.8rem;
     }
 
     .hero-title {
-        font-size: 15vw;
+        font-size: 17vw;
     }
 
     .hero-cards {
@@ -190,7 +196,7 @@
 
     .hero-description {
         max-width: 100%;
-        font-size: 1rem;
+        font-size: 1.3rem;
     }
 
     .hero-tag {
@@ -259,6 +265,10 @@
     .fan-intro-tagline {
         font-size: 1rem;
     }
+     .fan-card[data-card-index="0"] {
+
+    width: 135px
+}
 }
 
 /* ═══════════════════════════════════════════════════════
@@ -287,6 +297,8 @@
         width: 95px;
         padding: 0.6rem;
     }
+
+
 
     .fan-card-corner-val {
         font-size: 0.95rem;
