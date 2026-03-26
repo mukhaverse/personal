@@ -67,9 +67,8 @@
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.hero-cards .card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 14px 36px rgba(0, 0, 0, 0.12);
+.hero-cards {
+    transform: scale(0.85);
 }
 
 .card-title {

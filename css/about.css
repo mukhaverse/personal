@@ -22,21 +22,28 @@
     position: relative;
     background-color: var(--red);
     color: var(--light);
-    padding: 8rem 2rem 6rem;
-    display: flex;
+    padding: 8rem 3rem 6rem;
+    /* display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: flex-start; */
 }
 
 .about-inner {
     max-width: 860px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .about-section .section-tag {
     background-color: rgba(249, 244, 235, 0.18);
     color: var(--light);
     border: 1px solid rgba(249, 244, 235, 0.3);
+    /* display:block; */
+}
+
+.about-tag{
+    display: inline-block;
+
 }
 
 .about-statement {

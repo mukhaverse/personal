@@ -72,7 +72,7 @@ tl.to(".hero-cards .card", {
 
         if (w < 576) return -170;    
         if (w < 992) return -240;    
-        return -45;                  
+        return -30;                  
     },
     opacity: 1,
     scale: 1,
