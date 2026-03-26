@@ -51,6 +51,10 @@
         padding: 1rem 1.25rem;
     }
 
+    .nav-year{
+        display: none;
+    }
+
     /* Hero */
     .hero {
         padding: 1rem 1.25rem;
@@ -149,6 +153,7 @@
         padding: 0.5rem;
         padding-top: 0;
     }
+    
 
     .hero-divider {
         font-size: 1rem;
@@ -249,6 +254,7 @@
     .hero-divider {
         font-size: 0.8rem;
     }
+    
 
     .hero-title {
         font-size: 17vw;

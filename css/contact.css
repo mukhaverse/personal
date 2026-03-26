@@ -2,6 +2,7 @@
 .contact-section {
     padding: 7rem 3rem;
     background-color: var(--cream);
+    margin-bottom: 5rem;
 }
 
 .contact-inner {
