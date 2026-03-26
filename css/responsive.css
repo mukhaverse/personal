@@ -92,7 +92,7 @@
         height: auto;
         flex-shrink: 0;
         justify-content: center;
-        gap: 0.6rem;
+        gap: 2rem;
         margin-bottom: 1.5rem;
     }
 
@@ -109,6 +109,12 @@
     .about-section {
         padding: 5rem 1.5rem 4rem;
     }
+        .pip {
+
+    font-size: 2.7rem;
+    padding:1rem;
+
+}
 
     .edu-facts {
         grid-template-columns: 1fr;
@@ -175,7 +181,7 @@
     }
 
     .hero-cards {
-        gap: 0.4rem;
+        gap: 2rem;
     }
 
     .hero-cards .card {
@@ -214,6 +220,15 @@
     .contact-title {
         font-size: 3.5rem;
     }
+
+    .pip {
+
+    font-size: 2.5rem;
+    padding: 1rem;
+
+}
+
+
 
     .fan-stage {
         min-height: 300px;

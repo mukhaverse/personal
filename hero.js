@@ -5,8 +5,14 @@ gsap.set(".hero-title", { opacity: 0, y: 150, scale:1.5});
 gsap.set(".hero-divider", { opacity: 0, y: -20 });
 gsap.set(".site-nav", { opacity: 0, y: -20 });
 
-gsap.set(".hero-cards .card", { x: 70, opacity: 0 });
-gsap.set(".hero-description", { opacity: 0, x: -20, y:70 });
+// gsap.set(".hero-cards .card", { x: 70, opacity: 0 });
+gsap.set(".hero-description", { opacity: 0, x: -20,  y: () => {
+        const w = window.innerWidth;
+        if (w < 576) return 70;
+        if (w < 992) return 50;
+        return 0;
+    } });
+gsap.set(".hero-cards .card", { y: 10, opacity: 0 });
 
 
 const tl = gsap.timeline({
@@ -29,9 +35,9 @@ tl.to(".hero-title", {
    y: () => {
         const w = window.innerWidth;
 
-        if (w < 576) return -190;     // phones → big shift
-        if (w < 992) return -150;     // tablets → medium
-        return -45;                  // desktops → smaller
+        if (w < 576) return -190;    
+        if (w < 992) return -150;    
+        return -45;                  
     },
     duration: 0.6
 });
@@ -64,10 +70,23 @@ tl.to(".hero-description", {
 
 
 tl.to(".hero-cards .card", {
-    x: 0,
+    y: 0,
     opacity: 1,
     scale: 1,
-    stagger: 0.12,
+    stagger: 0.15,
     duration: 0.6,
-    ease: "power2.out"
-}, "-=0.4");
+    ease: "back.out(2)"
+}, "-=1.3");
+
+gsap.to(".hero-cards .card", {
+    y: -6,
+    duration: .9,
+    ease: "sine.inOut",
+    yoyo: true,
+    repeat: -1,
+    stagger: {
+        each: 0.3,
+        repeat: -1,
+        yoyo: true
+    }
+});

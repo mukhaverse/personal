@@ -50,14 +50,15 @@
     height: 35svh;
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    gap: 2rem;
 }
 
 .hero-cards .card {
     width: 180px;
     position: relative;
     aspect-ratio: 5 / 7;
-    padding: 0.75rem;
+    /* padding: 0.75rem; */
+    border: 2rem solid white;
     border-radius: 0.5rem;
     display: flex;
     flex-direction: column;
@@ -84,21 +85,34 @@
 }
 
 #hero-card-1 {
-    background-color: var(--accent-1);
+    /* background-color: var(--accent-1); */
     transform-origin: top right;
     z-index: 2;
 }
 
 #hero-card-2 {
-    background-color: var(--accent-2);
+    /* background-color: var(--accent-2); */
     z-index: 1;
 }
 
 #hero-card-3 {
-    background-color: var(--accent-3);
+    /* background-color: var(--accent-3); */
     transform-origin: top left;
     z-index: 0;
 }
+
+
+
+.hero-cards .card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.35rem;
+    display: block;
+    outline:0.4rem solid white;
+}
+
+
 
 
 
