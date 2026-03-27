@@ -1,7 +1,8 @@
 
 @media (max-width: 992px) {
 
-    /* Hero */
+
+    
     .hero-description {
         max-width: 65%;
     }
@@ -10,7 +11,8 @@
         width: 150px;
     }
 
-    /* Projects */
+
+    
     .project {
         grid-template-columns: 1fr !important;
         direction: ltr !important;
@@ -23,10 +25,12 @@
     }
 
     .project-visual {
-        height: 300px;
-    }
+    height: auto;
+    min-height: unset;
+}
 
-    /* Contact */
+
+
     .contact-inner {
         grid-template-columns: 1fr;
         gap: 3rem;
@@ -41,12 +45,12 @@
     }
 }
 
-/* ═══════════════════════════════════════════════════════
-   RESPONSIVE — 768px
-   ════════════════════════════════════════════════════ */
+
+
+
 @media (max-width: 768px) {
 
-    /* Navbar */
+
     .site-nav {
         padding: 1rem 1.25rem;
     }
@@ -55,7 +59,7 @@
         display: none;
     }
 
-    /* Hero */
+    
     .hero {
         padding: 1rem 1.25rem;
         padding-top: 0;
@@ -75,6 +79,7 @@
         font-size: 0.7rem;
     }
 
+
     .hero-title-cont {
         position: relative;
         top: auto;
@@ -92,7 +97,7 @@
         height: auto;
         flex-shrink: 0;
         justify-content: center;
-        gap: 2.3rem;
+        gap: 2rem;
         margin-bottom: 1.5rem;
     }
 
@@ -102,10 +107,10 @@
 
     .hero-description {
         max-width: 90%;
-        font-size: 1.7rem;
+        font-size: 2rem;
     }
 
-    /* About */
+    
     .about-section {
         padding: 5rem 1.5rem 4rem;
     }
@@ -121,17 +126,17 @@
         gap: 2.5rem;
     }
 
-    /* Projects */
+    
     .projects-section {
         padding: 4rem 1.5rem;
     }
 
     .project-visual {
-        height: 260px;
-        font-size: 5rem;
-    }
+    height: auto;
+    min-height: unset;
+    font-size: 5rem; 
+}
 
-    /* Contact */
     .contact-section {
         padding: 5rem 1.5rem;
     }
@@ -154,9 +159,11 @@
 }
 }
 
-/* ═══════════════════════════════════════════════════════
-   RESPONSIVE — 576px
-   ════════════════════════════════════════════════════ */
+
+
+
+
+
 @media (max-width: 576px) {
 
     /* Hero */
@@ -196,7 +203,7 @@
 
     .hero-description {
         max-width: 100%;
-        font-size: 1.3rem;
+        font-size: 1.4rem;
     }
 
     .hero-tag {
@@ -204,7 +211,7 @@
         padding: 4px 8px;
     }
 
-    /* About */
+    
     .about-statement {
         font-size: 1.5rem;
     }
@@ -213,12 +220,16 @@
         font-size: 2rem;
     }
 
-    /* Projects */
+
     .section-title {
         font-size: 2.5rem;
     }
+    .project-visual {
+    height: auto;
+    min-height: unset;
+}
 
-    /* Contact */
+
     .contact-section {
         padding: 4rem 1rem;
     }
@@ -271,9 +282,10 @@
 }
 }
 
-/* ═══════════════════════════════════════════════════════
-   RESPONSIVE — 360px
-   ════════════════════════════════════════════════════ */
+
+
+
+
 @media (max-width: 360px) {
 
     .hero-divider {

@@ -35,7 +35,7 @@ tl.to(".hero-title", {
 
         if (w < 576) return -200;    
         if (w < 992) return -250;    
-        return -45;                  
+        return -40;                  
     },
     duration: 0.6
 });

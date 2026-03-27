@@ -1,13 +1,10 @@
-/* ═══════════════════════════════════════════════════════════════════
-    fan-cards.js — Interactive fan card contact section (Simplified)
-   ═══════════════════════════════════════════════════════════════════ */
+
 
 const FAN_ANGLE_RANGE = 55;
 const FAN_Y_BASE      = 60;
 const FAN_EDGE_DIP    = 24;
 const FAN_X_SPREAD    = 100;
 const BACK_SCALE      = 1;
-
 const DUR_SWAP      = 0.55;
 const EASE_TO_FRONT = "back.out(1.4)";
 const EASE_TO_BACK  = "power3.inOut";
@@ -23,12 +20,14 @@ const EASE_TO_BACK  = "power3.inOut";
     if (N === 0) return;
 
     const FRONT_SLOT = N - 1;
-    // slots[slotIdx] = cardIdx; cardSlot[cardIdx] = slotIdx
+
     const slots    = cards.map((_, i) => N - 1 - i);
     const cardSlot = new Array(N);
     slots.forEach((cardIdx, slotIdx) => cardSlot[cardIdx] = slotIdx);
 
-    /* ── Calculate Visual Position ────────────────────────────────── */
+
+    
+
     function getTransform(slotIdx, isFront) {
         const t        = N === 1 ? 1 : slotIdx / (N - 1);
         const rotation = (t - 0.5) * FAN_ANGLE_RANGE;
@@ -40,7 +39,9 @@ const EASE_TO_BACK  = "power3.inOut";
         return { rotation, x, y, scale, zIndex, transformOrigin: "center bottom" };
     }
 
-    /* ── Update All Cards ─────────────────────────────────────────── */
+
+    
+
     function renderAll(animate) {
         cards.forEach((card, cardIdx) => {
             const slotIdx = cardSlot[cardIdx];
@@ -62,13 +63,15 @@ const EASE_TO_BACK  = "power3.inOut";
         });
     }
 
-    /* ── Interactions ─────────────────────────────────────────────── */
+
+    
+
     cards.forEach((card, cardIdx) => {
-        // Click to Swap
+        
         card.addEventListener("click", (e) => {
             const isFront = cardSlot[cardIdx] === FRONT_SLOT;
             if (isFront) {
-                if (cardIdx === 0) e.preventDefault(); // Intro card is not a link
+                if (cardIdx === 0) e.preventDefault(); 
                 return;
             }
 
@@ -76,7 +79,7 @@ const EASE_TO_BACK  = "power3.inOut";
             const currentFrontIdx = slots[FRONT_SLOT];
             const clickedSlotIdx  = cardSlot[cardIdx];
 
-            // Swap positions in data
+            
             slots[FRONT_SLOT] = cardIdx;
             slots[clickedSlotIdx] = currentFrontIdx;
             cardSlot[cardIdx] = FRONT_SLOT;
@@ -85,7 +88,9 @@ const EASE_TO_BACK  = "power3.inOut";
             renderAll(true);
         });
 
-        // Hover Lift
+        
+        
+
         card.addEventListener("mouseenter", () => {
             if (cardSlot[cardIdx] !== FRONT_SLOT) {
                 gsap.to(card, { y: "-=10", duration: 0.22, ease: "power2.out", overwrite: "auto" });
@@ -100,10 +105,13 @@ const EASE_TO_BACK  = "power3.inOut";
         });
     });
 
-    // Initial Layout
+    
     renderAll(false);
 
-    // Entrance Animation
+    
+
+    gsap.registerPlugin(ScrollTrigger);
+
     const cardsBySlot = [...cards].sort((a, b) => cardSlot[cards.indexOf(a)] - cardSlot[cards.indexOf(b)]);
     gsap.from(cardsBySlot, {
         y: 160,
@@ -111,6 +119,11 @@ const EASE_TO_BACK  = "power3.inOut";
         duration: 0.6,
         stagger: 0.07,
         ease: "back.out(1.3)",
-        delay: 0.15,
+        delay: .5,
+        scrollTrigger: {
+        trigger: stage,
+        start: "top 80%",
+        toggleActions: "play none none reverse"
+}
     });
 }());
