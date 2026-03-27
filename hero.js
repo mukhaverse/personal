@@ -81,15 +81,20 @@ tl.to(".hero-cards .card", {
     ease: "back.out(2)"
 }, "-=1.3");
 
+gsap.set(".hero-cards .card", {
+    force3D: true,
+    willChange: "transform"
+});
+
 gsap.to(".hero-cards .card", {
-    yPercent: -5,
-    duration: .9,
+    y: "-=10",
+    duration: 1.2,
     ease: "sine.inOut",
     yoyo: true,
     repeat: -1,
     stagger: {
         each: 0.3,
-        repeat: -1,
-        yoyo: true
+        yoyo: true,
+        repeat: -1
     }
 });
