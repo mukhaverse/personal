@@ -84,15 +84,17 @@ tl.to(".hero-cards .card", {
 
 
 
-gsap.to(".hero-cards .card", {
-    y: "-=10",
-    duration: 1.2,
-    ease: "sine.inOut",
-    yoyo: true,
-    repeat: -1,
-    stagger: {
-        each: 0.3,
-        yoyo: true,
-        repeat: -1
-    }
+
+tl.then(() => {
+    gsap.utils.toArray(".hero-cards .card").forEach((card, i) => {
+        gsap.to(card, {
+            y: "+=8",
+            duration: 0.9,
+            ease: "sine.inOut",
+            yoyo: true,
+            repeat: -1,
+            delay: i * 0.3,
+            force3D: true
+        });
+    });
 });
