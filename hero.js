@@ -7,7 +7,7 @@ gsap.set(".site-nav", { opacity: 0, y: -20 });
 const w = window.innerWidth;
 // gsap.set(".hero-cards .card", { x: 70, opacity: 0 });
 gsap.set(".hero-description", { opacity: 0, x: -20,  y: () => {    
-        if (w < 576) return 50;
+        if (w < 576) return -50;
         if (w < 992) return 35;
         return 0;
     } });
