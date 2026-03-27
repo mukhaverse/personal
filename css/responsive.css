@@ -11,6 +11,10 @@
         width: 150px;
     }
 
+    .hero-cards {
+    margin-top: -240px;
+}
+
 
     
     .project {
@@ -166,7 +170,7 @@
 
 @media (max-width: 576px) {
 
-    /* Hero */
+
     .hero {
         padding: 0.5rem;
         padding-top: 0;
@@ -195,10 +199,12 @@
 
     .hero-cards {
         gap: 2rem;
+        margin-top: -170px;
     }
 
     .hero-cards .card {
         width: 95px;
+        
     }
 
     .hero-description {

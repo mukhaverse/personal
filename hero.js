@@ -7,8 +7,8 @@ gsap.set(".site-nav", { opacity: 0, y: -20 });
 const w = window.innerWidth;
 // gsap.set(".hero-cards .card", { x: 70, opacity: 0 });
 gsap.set(".hero-description", { opacity: 0, x: -20,  y: () => {    
-        if (w < 576) return -50;
-        if (w < 992) return 35;
+        if (w < 576) return 85;
+        if (w < 992) return 55;
         return 0;
     } });
 gsap.set(".hero-cards .card", { y: 10, opacity: 0,force3D: true,
@@ -69,32 +69,25 @@ tl.to(".hero-description", {
 
 
 tl.to(".hero-cards .card", {
-   y: () => {
 
-        if (w < 576) return -170;    
-        if (w < 992) return -240;    
-        return -30;                  
-    },
     opacity: 1,
     scale: 1,
     stagger: 0.15,
     duration: 0.6,
     ease: "back.out(2)"
-}, "-=1.3");
+}, "-=1.2");
 
 
 
 
-tl.then(() => {
-    gsap.utils.toArray(".hero-cards .card").forEach((card, i) => {
-        gsap.to(card, {
-            y: "+=8",
-            duration: 0.9,
-            ease: "sine.inOut",
-            yoyo: true,
-            repeat: -1,
-            delay: i * 0.3,
-            force3D: true
-        });
+gsap.utils.toArray(".hero-cards .card").forEach((card, i) => {
+    gsap.to(card, {
+        y: "+=10",           // relative offset so it stacks on top of timeline's y
+        duration: 0.9,
+        ease: "sine.inOut",
+        yoyo: true,
+        repeat: -1,
+        delay: i * 0.3,
+        force3D: true
     });
 });
