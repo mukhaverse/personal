@@ -11,7 +11,8 @@ gsap.set(".hero-description", { opacity: 0, x: -20,  y: () => {
         if (w < 992) return 35;
         return 0;
     } });
-gsap.set(".hero-cards .card", { y: 10, opacity: 0 });
+gsap.set(".hero-cards .card", { y: 10, opacity: 0,force3D: true,
+    willChange: "transform"});
 
 
 const tl = gsap.timeline({
@@ -81,10 +82,7 @@ tl.to(".hero-cards .card", {
     ease: "back.out(2)"
 }, "-=1.3");
 
-gsap.set(".hero-cards .card", {
-    force3D: true,
-    willChange: "transform"
-});
+
 
 gsap.to(".hero-cards .card", {
     y: "-=10",
